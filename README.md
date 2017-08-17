@@ -1,4 +1,6 @@
 # Linden & Roloff (2015) - corrigendum
-This is a corrigendum to [Linden &amp; Roloff (2015)](http://onlinelibrary.wiley.com/doi/10.1002/ece3.1618/full) for illustrating a correct implementation of the informed prior described by [Link &amp; Barker (2006)](https://www.pwrc.usgs.gov/prodabs/ab10060307/6623_Link.pdf).
+[Linden &amp; Roloff (2015)](http://onlinelibrary.wiley.com/doi/10.1002/ece3.1618/full) described an approach to specifying a prior variance for regression coefficients that attempted to follow the approach used by [Link &amp; Barker (2006)](https://www.pwrc.usgs.gov/prodabs/ab10060307/6623_Link.pdf).  The description and implementation in Linden &amp; Roloff (2015) were incorrect.
 
-Our original description of the prior was wrong...
+Link &amp; Barker (2006) discuss the problems associated with vague priors, and illustrate a simple example where the prior variance has an influence on model selection (Figure 2).  We illustrated a similar issue in [Figure 4](http://onlinelibrary.wiley.com/enhanced/figures/doi/10.1002/ece3.1618#figure-viewer-ece31618-fig-0005) of Linden &amp; Roloff (2015) where increasing the prior variance to arbitrarily large values for regression coefficients caused the inclusion probabilities to decrease for those $beta parameters with variable support.  The solution presented by Link &amp; Barker (2006) (hereafter, the L&B prior) was to define a total variance (V) for the linear predictor and partition that variance among each regression parameter depending on how many parameters are included in the predictor.
+
+an apprOur original description of the prior was wrong...
